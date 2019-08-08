@@ -1,104 +1,41 @@
 <!doctype html>
-<head>
-  <link rel="stylesheet" type="text/css" href="normalize.css">
-  <style type="text/css">
-    body {
-      color: white;
-      stroke: white;
-      fill: white;
-      font-family: sans-serif;
-      height: 100vh;
-      overflow: hidden;
-      background: url("https://lh3.googleusercontent.com/PBfd30t912dyLef3h_3mSp9hfzTHERU5Bu-QF9aVFwGeSpn9Rn7dMmfKIuFcvtYiTA1GqORHLqDbphUtrlrf4Vsxf5F4MH-BNoqogs4ZU8HV1JF16BCcz5m2nIT_4CnY34KW_r-OYufkeZuAxnCmqnJrRbJ1BCxPkN0iJSnpYR_CEESxF9ihnpBB30_sO3tE4iUy0kK5e_Ngdw9zgdBbeDrK3Hl2AdQS1R6N8BIREhfwl6ebkGtDnEJ9uVOic6f5CGv8RXQllgeUwX0V_YUYRX7MTKiJY_AKEhaiFHzLBu-vMtzYHxTjpfKZUCy86n50Q8wlYleVAWwzTCW7Bt2KpIAz5BLV0XCTHuzc7zljqMSCoGoq-k64o9VTs8C_oyqoKW2aDu3qsQjmHnuCimZscBoNtixF5Ig7ZvjdWbjGhWo52KZJAd562T7GMvvxswYGUdA_rWzw_kTo38qPMCD0FJXg016NZzG4Rczx86JBbP0j6V7oOLCuJWyHPwJLIvDd-owEZMuJYmOqKoRAgKDxOLZk4AN2QT7mBaTLdssU7vM3RnzCGlidwE-v_0DvGS8zGZmCrbO2mzk1ElYeromE3fP9Sz2UFklmdJRHuUtS97GvwZM1slzFKcKmoOSRg00UtNZI_xNEOOTjvPGqiZtS1peswoFHTA=w2250-h1500-no");
-      background-position: center center;
-      background-size: cover;
-    }
-    .demo {
-      text-align: center;
-      font-size: 13vw;
-      text-shadow: 
-      /* Color 1 */
-      1px 1px #61b4de, 2px 2px #61b4de, 3px 3px #61b4de, 4px 4px #61b4de, 5px 5px #61b4de,
-      /* Color 2 */
-      6px 6px #91c467, 7px 7px #91c467, 8px 8px #91c467, 9px 9px #91c467, 10px 10px #91c467,
-      /* Color 3 */
-      11px 11px #f3a14b, 12px 12px #f3a14b, 13px 13px #f3a14b, 14px 14px #f3a14b, 15px 15px #f3a14b,
-      /* Color 4 */
-      16px 16px #e84c50, 17px 17px #e84c50, 18px 18px #e84c50, 19px 19px #e84c50, 20px 20px #e84c50,
-      /* Color 5 */
-      21px 21px #4e5965, 22px 22px #4e5965, 23px 23px #4e5965, 24px 24px #4e5965, 25px 25px #4e5965;
-    }
-    .play {
-      text-align: center;
-    }
-    .play a {
-      width: 120px;
-      cursor: pointer;
-      display: inline-block;
-    }
-    .modal {
-      position: absolute;
-      top: 5px;
-      left: 5px;
-      right: 5px;
-      bottom: 5px;
-      overflow: auto;
-      background: rgba(0,0,0,.6);
-      display: none;
-    }
-    .modal.open {
-      display: block;
-    }
-    .modal .close {
-      color: white;
-      position: absolute;
-      top: 5px;
-      right: 5px;
-      width: 60px;
-      cursor: pointer;
-    }
-    @media only screen and (max-width: 600px) {
-      body {
-        background: url("https://lh3.googleusercontent.com/773DVy4JerN_sZqZrrVrvUR5QC1AtFjKVRXp1s50rn_oEmzoclXoKizDjepdkHKWCV0HyJByrgBPWm7Ah-awpsPgucDmxivE1tLKWhqyP0_Ag-bWwC6Gzk_Xqndclv40YwN1VtF9oQQdQgbYOjpYeePHlHSn1bYZEtBzY8vgcE0zLhMUoqKlUzd_H5H6V8WQOyCmuqca8pW5tvSYH1nOsE4GBomVto3PIDZMfCE1s0Fn24xX-C4ijbEozzAeiiLHv0c4_g8lt1bm2mzQ6RqpgjVbl-H4U3r4CDFu4ZDXSnHkYZo21Wum-gVHKvay-Pn6Yf1WomceWw3Ll74__MKaKjVcUby1LEOydAdZ2LyMy0WJEPhiVcgzUK4XCv61Pp3JaYEXom8lCqM_qXsXd9WSiCRhMnbE3i5qZmFJr_Ly_HrTi3q5matZCWC6qXd8M2TAZ07_GZ9KaiMXrC4jor3Kkk9QjnkqRq_XX7TWnE1jfeaRF0YLz9dZw_IvrKMMu3GfphHmBbhg2zrOesNKzmmzirCzDRZdf7JTuOE56OKydM0L-SNVKV52hm_UJ-Lp_KUdWf5TEUKns2GUqo6CmhR0oyY5SikS6AtbaLNY7CWCMj880Iat6k-_InWIq3UtoMuFgd-9U6sMZgMIPVpre7WG9lEDVeJfNw=w1114-h1670-no");
-        background-position: center center;
-        background-size: cover;
-      }
-      .demo {
-        font-size: 26vw;
-      }
-    }
-  </style>
-</head>
-<html>
-  <body>
-    <h1 class="demo">DEMO HOUSE</h1>
-    <div class="play">
-      <a href="javascript: openModal()">
-        <svg class="video-overlay-play-button" viewBox="0 0 200 200" alt="Play video">
-          <circle cx="100" cy="100" r="90" fill="none" stroke-width="15"/>
-          <polygon points="70, 55 70, 145 145, 100"/>
-        </svg>
-      </a>
-    </div>
-    <div id="modal" class="modal">
-      <a href="javascript: closeModal()" class="close">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13 13">
-          <polyline class="arrow" fill="none" stroke="currentColor" points="1 1,6.5 6.5,12 1"/>
-          <polyline class="arrow" fill="none" stroke="currentColor" points="1 12,6.5 6.5,12 12"/>
-        </svg>
-      </a>
-      <iframe src="https://player.vimeo.com/video/345735707" width="100%" height="100%" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-    </div>
-  </body>
+<html class="no-js" lang="">
 
-  <script type="text/javascript">
-    function openModal() {
-      const modal = document.getElementById('modal');
-      modal.classList.add('open');
-    }
-    function closeModal() {
-      const modal = document.getElementById('modal');
-      modal.classList.remove('open');
-    }
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+  <!--[if IE]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
+
+  <!-- Add your site or application content here -->
+  <p>Hello world! This is HTML5 Boilerplate.</p>
+  <script src="js/vendor/modernizr-3.7.1.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\/script>')</script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  <script>
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set','transport','beacon'); ga('send', 'pageview')
   </script>
+  <script src="https://www.google-analytics.com/analytics.js" async></script>
+</body>
+
 </html>
